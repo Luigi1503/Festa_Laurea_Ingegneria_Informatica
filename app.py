@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 CONFIRM_FILE = 'conferme.json'
 
-def salva_su_github(file_path, token, repo, branch='main'):
+def salva_su_github(file_path, token, repo, branch='master'):
     with open(file_path, 'rb') as f:
         contenuto = base64.b64encode(f.read()).decode('utf-8')
 
