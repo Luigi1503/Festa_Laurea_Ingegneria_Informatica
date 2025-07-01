@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>🍇 Festa in Vigna - Tenuta Ippocrate</title>
+  <style>
+    /* Stile identico al tuo */
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: url('https://images.unsplash.com/photo-1602526432604-b1570f8b4b87') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      background-color: #333;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 2rem;
+      border-radius: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.3rem; font-weight: normal; margin-bottom: 2rem; }
+    .emoji { font-size: 1.5rem; }
+    ul { text-align: left; margin-top: 1rem; margin-bottom: 1rem; }
+    .laurea { font-size: 1.5rem; font-weight: bold; margin-top: 2rem; margin-bottom: 1rem; }
+    .rsvp {
+      font-size: 1.1rem;
+      margin-top: 2rem;
+      font-weight: 600;
+      animation: lampeggiaVerde 2s infinite ease-in-out;
+    }
+    .nomi { margin-top: 2rem; font-style: italic; font-size: 1rem; color: #ccc; }
+    pre {
+      text-align: left;
+      background: #1e1e1e;
+      color: #d4d4d4;
+      padding: 1rem;
+      border-radius: 10px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'Courier New', monospace;
+    }
+
+    @keyframes lampeggiaVerde {
+      0%, 100% { color: #dfffe2; text-shadow: 0 0 4px #25D366; }
+      50% { color: #ffffff; text-shadow: 0 0 8px #25D366; }
+    }
+
+    form {
+      margin-top: 2rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: none;
+      margin: 0.5rem;
+    }
+
+    button {
+      background-color: #25D366;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1da851;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Festa tra Ingegneri!</h1>
+    <div class="laurea">🎓 29/07/2025 alle ore 21:00</div>
+    <h2>Tenuta Ippocrate, tra vigna, vino e (poco) codice</h2>
+    <p class="emoji">🍷 + 🍇 + 👨‍💻 x 4 = 😵‍💫</p>
+    <p><strong>Quando?</strong> Prossimamente... appena smettiamo di debuggare!</p>
+    <p><strong>Dove?</strong> In mezzo alle vigne di <em>Tenuta Ippocrate</em>, senza connessione Wi-Fi. E sì, è voluto.</p>
+
+    <h3>Dress code?</h3>
+    <ul>
+      <li>❌ No tacchi (qui si affonda peggio che in un bug)</li>
+      <li>❌ No smoking (non è una demo di prodotto)</li>
+      <li>✅ Abbigliamento comodo da “sto per bere troppo”</li>
+    </ul>
+
+    <pre>
+function checkDressCode(guest) {
+  if (guest.shoes === "heels" || guest.outfit === "elegant") {
+    throw new Error("FashionException: Tacchi e vestiti eleganti non sono compatibili con il terreno agricolo.");
+  }
+  if (guest.mood !== "party" || guest.wineTolerance < 3) {
+    console.warn("Attenzione: potresti non essere pronto per questa festa.");
+  }
+  console.log("✅ Accesso alla vigna garantito. Versa il vino.");
+}
+    </pre>
+
+    <p>Porta solo te stesso, la sete e la voglia di dire cose a caso dopo il terzo bicchiere.</p>
+    <div class="rsvp">🕐 RSVP entro il 10 luglio</div>
+
+    <!-- 🔽 FORM HTML -->
+    <form action="/conferma" method="POST">
+      <input type="text" name="nome" placeholder="Nome" required>
+      <input type="text" name="cognome" placeholder="Cognome" required>
+      <button type="submit">✅ Conferma presenza</button>
+    </form>
+
+    <div class="nomi">Organizzato da: Luigi, Gioia, Arianna e Debora</div>
+  </div>
+</body>
+</html>
